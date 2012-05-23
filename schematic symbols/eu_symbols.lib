@@ -1,0 +1,829 @@
+EESchema-LIBRARY Version 2.3  Date: Sat 14 Jan 2012 04:29:00 PM EST
+#
+# Actuator_Pull
+#
+DEF ~Actuator_Pull Act 0 40 N N 1 F N
+F0 "Act" 0 100 60 H I C CNN
+F1 "Actuator_Pull" 25 -100 60 H I C CNN
+DRAW
+P 2 0 0 0  0 0  -50 0 N
+P 2 0 0 0  25 0  100 0 N
+P 2 0 0 0  125 0  200 0 N
+P 4 0 0 0  -100 50  -50 50  -50 -50  -100 -50 N
+ENDDRAW
+ENDDEF
+#
+# Actuator_Push
+#
+DEF ~Actuator_Push Act 0 40 N N 1 F N
+F0 "Act" 0 100 60 H I C CNN
+F1 "Actuator_Push" 25 -100 60 H I C CNN
+DRAW
+P 2 0 0 0  0 0  -75 0 N
+P 2 0 0 0  25 0  100 0 N
+P 2 0 0 0  125 0  200 0 N
+P 4 0 0 0  -25 50  -75 50  -75 -50  -25 -50 N
+ENDDRAW
+ENDDEF
+#
+# Actuator_Turn
+#
+DEF ~Actuator_Turn Act 0 40 N N 1 F N
+F0 "Act" 0 100 60 H I C CNN
+F1 "Actuator_Turn" 25 -100 60 H I C CNN
+DRAW
+P 2 0 0 0  0 0  -50 0 N
+P 2 0 0 0  25 0  100 0 N
+P 2 0 0 0  125 0  200 0 N
+P 4 0 0 0  0 50  -50 50  -50 -50  -100 -50 N
+ENDDRAW
+ENDDEF
+#
+# Adjustible_Resistor
+#
+DEF Adjustible_Resistor R 0 40 N N 1 F N
+F0 "R" 0 -100 60 H V C CNN
+F1 "Adjustible_Resistor" 0 0 60 H V C CNN
+DRAW
+S -150 50 150 -50 0 1 0 N
+P 4 0 1 0  -100 -100  100 100  100 100  100 100 F
+P 4 0 1 0  75 100  100 75  125 125  75 100 F
+X 1 1 -200 0 50 R 0 0 1 1 P
+X 2 2 200 0 50 L 0 0 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Breakdown_Diode_Bi
+#
+DEF Breakdown_Diode_Bi D 0 40 N N 1 F N
+F0 "D" 150 -50 60 H V L CNN
+F1 "Breakdown_Diode_Bi" 150 50 60 H V L CNN
+DRAW
+P 2 0 1 0  -100 0  -100 50 N
+P 2 0 1 0  -100 0  100 0 N
+P 2 0 1 0  100 0  100 -50 N
+P 3 0 1 0  0 200  0 0  0 25 N
+P 4 0 1 0  0 0  -100 200  100 200  0 0 N
+P 5 0 1 0  0 0  -100 -200  100 -200  0 0  0 -200 N
+X ~ 1 0 300 100 D 50 50 1 1 P
+X ~ 2 0 -300 100 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Capacitor
+#
+DEF Capacitor C 0 40 N N 1 F N
+F0 "C" 75 100 60 H V L CNN
+F1 "Capacitor" 75 -100 60 H V L CNN
+DRAW
+P 2 0 1 0  -100 -25  100 -25 N
+P 2 0 1 0  0 -25  0 -150 N
+P 2 0 1 0  100 25  -100 25 N
+P 3 0 1 0  0 150  0 25  25 25 N
+X 1 1 0 200 50 D 0 0 1 1 P
+X 2 2 0 -200 50 U 0 0 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Capacitor_Adjustible
+#
+DEF Capacitor_Adjustible C 0 40 N N 1 F N
+F0 "C" 175 100 60 H V L CNN
+F1 "Capacitor_Adjustible" 75 -100 60 H V L CNN
+DRAW
+P 2 0 1 0  -100 -25  100 -25 N
+P 2 0 1 0  0 -25  0 -150 N
+P 2 0 1 0  100 25  -100 25 N
+P 3 0 1 0  -150 -150  150 150  150 150 N
+P 3 0 1 0  0 150  0 25  25 25 N
+P 5 0 1 0  100 125  125 100  150 150  100 125  125 125 F
+X 1 1 0 200 50 D 0 0 1 1 P
+X 2 2 0 -200 50 U 0 0 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Capacitor_Polarized
+#
+DEF Capacitor_Polarized C 0 40 N N 1 F N
+F0 "C" 75 100 60 H V L CNN
+F1 "Capacitor_Polarized" 75 -100 60 H V L CNN
+DRAW
+P 2 0 1 0  -100 -25  100 -25 N
+P 2 0 1 0  0 -25  0 -150 N
+P 2 0 1 0  100 25  -100 25 N
+P 3 0 1 0  0 150  0 25  25 25 N
+P 6 0 1 13  -100 150  -100 50  -100 100  -50 100  -150 100  -150 100 N
+X 1 1 0 200 50 D 0 0 1 1 P
+X 2 2 0 -200 50 U 0 0 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Capacitor_Preset
+#
+DEF Capacitor_Preset C 0 40 N N 1 F N
+F0 "C" 250 100 60 H V L CNN
+F1 "Capacitor_Preset" 75 -100 60 H V L CNN
+DRAW
+P 2 0 1 0  -100 -25  100 -25 N
+P 2 0 1 0  0 -25  0 -150 N
+P 2 0 1 0  100 25  -100 25 N
+P 2 0 1 0  100 200  200 100 N
+P 3 0 1 0  -150 -150  150 150  150 150 N
+P 3 0 1 0  0 150  0 25  25 25 N
+X 1 1 0 200 50 D 0 0 1 1 P
+X 2 2 0 -200 50 U 0 0 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Cell
+#
+DEF Cell BT 0 40 N N 1 F N
+F0 "BT" 0 -250 60 H V C CNN
+F1 "Cell" 0 250 60 H V C CNN
+DRAW
+P 2 0 1 0  -50 -100  -50 100 N
+P 3 0 1 0  0 200  0 -200  0 -200 N
+P 5 0 1 0  25 150  75 150  50 150  50 175  50 125 N
+X 1 1 100 0 100 L 0 0 1 1 P
+X 2 2 -150 0 100 R 0 0 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Current_Source
+#
+DEF Current_Source PS 0 0 N Y 1 F N
+F0 "PS" 150 -50 60 H V L CNN
+F1 "Current_Source" 150 50 60 H V L CNN
+DRAW
+C 0 0 100 0 0 0 N
+P 2 0 0 0  100 0  -100 0 N
+X + 1 0 200 100 D 50 50 1 1 P
+X - 2 0 -200 100 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Diode
+#
+DEF Diode D 0 40 Y Y 1 F N
+F0 "D" 150 -50 60 H V L CNN
+F1 "Diode" 150 50 60 H V L CNN
+DRAW
+P 2 0 1 0  -100 -100  100 -100 N
+P 3 0 1 0  0 100  0 -100  0 -75 N
+P 4 0 1 0  0 -100  -100 100  100 100  0 -100 N
+X ~ A 0 200 100 D 50 50 1 1 P
+X ~ C 0 -200 100 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Ferrite_Bead
+#
+DEF Ferrite_Bead L 0 40 N N 1 F N
+F0 "L" 0 125 60 H V C CNN
+F1 "Ferrite_Bead" 0 -125 60 H V C CNN
+DRAW
+P 2 0 1 0  -150 0  150 0 N
+P 4 0 1 0  -100 -50  -100 50  100 50  100 -50 N
+X 1 1 200 0 50 L 0 0 1 1 P
+X 2 2 -200 0 50 R 0 0 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Gnd
+#
+DEF ~Gnd - 0 40 N N 1 F N
+F0 "-" 200 250 60 H I L CNN
+F1 "Gnd" 150 0 60 H I L CNN
+DRAW
+P 2 0 0 0  -150 50  150 50 N
+P 2 0 0 0  -100 0  100 0 N
+P 2 0 0 0  -50 -50  50 -50 N
+P 3 0 0 0  0 150  0 50  0 50 N
+X GNF 1 0 200 50 D 0 0 1 1 w
+ENDDRAW
+ENDDEF
+#
+# I/O_Pin
+#
+DEF I/O_Pin J 0 0 N Y 1 F N
+F0 "J" -150 -150 60 H I L CNN
+F1 "I/O_Pin" -50 0 60 H V R CNN
+DRAW
+P 6 0 0 0  0 0  -50 -50  -550 -50  -550 50  -50 50  0 0 N
+X ~ ~ 0 0 0 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# IGFET_Dep_N-ch
+#
+DEF IGFET_Dep_N-ch Q 0 40 Y Y 1 F N
+F0 "Q" 275 -50 60 H V L CNN
+F1 "IGFET_Dep_N-ch" 275 50 60 H V L CNN
+DRAW
+P 2 0 1 0  0 -150  0 150 N
+P 2 0 1 0  0 -100  200 -100 N
+P 2 0 1 0  0 0  100 0 N
+P 2 0 1 0  0 100  200 100 N
+P 3 0 1 0  99 -25  49 0  99 25 N
+P 4 0 1 0  -50 100  -50 -100  -200 -100  -200 -100 N
+X ~ D 200 100 100 L 50 50 1 1 P
+X ~ G -200 -100 100 R 50 50 1 1 P
+X ~ S 200 -100 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# IGFET_Dep_P-ch
+#
+DEF IGFET_Dep_P-ch Q 0 40 Y Y 1 F N
+F0 "Q" 275 -50 60 H V L CNN
+F1 "IGFET_Dep_P-ch" 275 50 60 H V L CNN
+DRAW
+P 2 0 1 0  0 -150  0 150 N
+P 2 0 1 0  0 -100  200 -100 N
+P 2 0 1 0  0 0  100 0 N
+P 2 0 1 0  0 100  200 100 N
+P 3 0 1 0  25 -25  75 0  25 25 N
+P 4 0 1 0  -50 100  -50 -100  -200 -100  -200 -100 N
+X ~ D 200 100 100 L 50 50 1 1 P
+X ~ G -200 -100 100 R 50 50 1 1 P
+X ~ S 200 -100 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# IGFET_Enh_N-ch
+#
+DEF IGFET_Enh_N-ch Q 0 40 Y Y 1 F N
+F0 "Q" 275 -50 60 H V L CNN
+F1 "IGFET_Enh_N-ch" 275 50 60 H V L CNN
+DRAW
+P 2 0 1 0  0 -100  200 -100 N
+P 2 0 1 0  0 -50  0 -150 N
+P 2 0 1 0  0 0  100 0 N
+P 2 0 1 0  0 25  0 -25 N
+P 2 0 1 0  0 50  0 150 N
+P 2 0 1 0  0 100  200 100 N
+P 3 0 1 0  100 -25  50 0  100 25 N
+P 4 0 1 0  -50 100  -50 -100  -200 -100  -200 -100 N
+X ~ D 200 100 100 L 50 50 1 1 P
+X ~ G -200 -100 100 R 50 50 1 1 P
+X ~ S 200 -100 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# IGFET_Enh_P-ch
+#
+DEF IGFET_Enh_P-ch Q 0 40 Y Y 1 F N
+F0 "Q" 275 -50 60 H V L CNN
+F1 "IGFET_Enh_P-ch" 275 50 60 H V L CNN
+DRAW
+P 2 0 1 0  0 -100  200 -100 N
+P 2 0 1 0  0 -50  0 -150 N
+P 2 0 1 0  0 0  100 0 N
+P 2 0 1 0  0 25  0 -25 N
+P 2 0 1 0  0 50  0 150 N
+P 2 0 1 0  0 100  200 100 N
+P 3 0 1 0  25 -25  75 0  25 25 N
+P 4 0 1 0  -50 100  -50 -100  -200 -100  -200 -100 N
+X ~ D 200 100 100 L 50 50 1 1 P
+X ~ G -200 -100 100 R 50 50 1 1 P
+X ~ S 200 -100 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Inductor
+#
+DEF Inductor L 0 40 N N 1 F N
+F0 "L" 0 25 60 H V C CNN
+F1 "Inductor" 0 -200 60 H V C CNN
+DRAW
+A -150 -100 50 1 1799 0 1 0 N -100 -100 -200 -100
+A -50 -100 50 1 1799 0 1 0 N 0 -100 -100 -100
+A 50 -100 50 1 1799 0 1 0 N 100 -100 0 -100
+A 150 -100 50 1 1799 0 1 0 N 200 -100 100 -100
+X 1 1 200 -150 50 U 0 0 1 1 P
+X 2 2 -200 -150 50 U 0 0 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Inductor_core
+#
+DEF Inductor_core L 0 40 N N 1 F N
+F0 "L" 0 25 60 H V C CNN
+F1 "Inductor_core" 0 -200 60 H V C CNN
+DRAW
+A -150 -100 50 1 1799 0 1 0 N -100 -100 -200 -100
+A -50 -100 50 1 1799 0 1 0 N 0 -100 -100 -100
+A 50 -100 50 1 1799 0 1 0 N 100 -100 0 -100
+A 150 -100 50 1 1799 0 1 0 N 200 -100 100 -100
+P 2 0 1 0  200 -25  -200 -25 N
+X 1 1 200 -150 50 U 0 0 1 1 P
+X 2 2 -200 -150 50 U 0 0 1 1 P
+ENDDRAW
+ENDDEF
+#
+# JFET_N-ch
+#
+DEF JFET_N-ch Q 0 40 Y Y 1 F N
+F0 "Q" 275 -50 60 H V L CNN
+F1 "JFET_N-ch" 275 50 60 H V L CNN
+DRAW
+P 2 0 1 0  -100 -100  0 -100 N
+P 2 0 1 0  0 -150  0 150 N
+P 2 0 1 0  0 -100  200 -100 N
+P 2 0 1 0  0 100  200 100 N
+P 3 0 1 0  -100 -75  -50 -100  -100 -125 N
+X ~ D 200 100 100 L 50 50 1 1 P
+X ~ G -200 -100 100 R 50 50 1 1 P
+X ~ S 200 -100 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# JFET_P-ch
+#
+DEF JFET_P-ch Q 0 40 Y Y 1 F N
+F0 "Q" 275 -50 60 H V L CNN
+F1 "JFET_P-ch" 275 50 60 H V L CNN
+DRAW
+P 2 0 1 0  -100 -100  0 -100 N
+P 2 0 1 0  0 -150  0 150 N
+P 2 0 1 0  0 -100  200 -100 N
+P 2 0 1 0  0 100  200 100 N
+P 3 0 1 0  -50 -75  -100 -100  -50 -125 N
+X ~ D 200 100 100 L 50 50 1 1 P
+X ~ G -200 -100 100 R 50 50 1 1 P
+X ~ S 200 -100 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# LED
+#
+DEF LED D 0 40 Y Y 1 F N
+F0 "D" 150 -50 60 H V L CNN
+F1 "LED" 150 50 60 H V L CNN
+DRAW
+P 2 0 1 0  -100 -100  100 -100 N
+P 3 0 1 0  0 100  0 -100  0 -75 N
+P 4 0 1 0  0 -100  -100 100  100 100  0 -100 N
+P 5 0 1 0  -250 50  -200 25  -225 0  -250 50  -175 -25 F
+P 6 0 1 0  -200 100  -175 50  -150 75  -200 100  -125 25  -125 25 F
+X ~ A 0 200 100 D 50 50 1 1 P
+X ~ C 0 -200 100 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Measurement
+#
+DEF Measurement DS 0 40 N N 1 F N
+F0 "DS" 225 0 60 H V L CNN
+F1 "Measurement" 0 0 150 H V C CNB
+DRAW
+C 0 0 200 0 1 0 N
+X 1 1 0 300 100 D 50 50 1 1 P
+X 2 2 0 -300 100 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Photoransistor_NPN_W-B
+#
+DEF Photoransistor_NPN_W-B Q 0 40 Y Y 1 F N
+F0 "Q" 25 275 60 H V C CNN
+F1 "Photoransistor_NPN_W-B" 25 -275 60 H V C CNN
+DRAW
+P 2 0 1 0  -175 0  -25 0 N
+P 2 0 1 0  -50 225  -100 275 N
+P 3 0 1 0  -100 175  -150 225  -150 225 N
+P 3 0 1 0  -25 125  -25 -125  -25 -125 N
+P 4 0 1 0  -75 150  -125 175  -100 200  -75 150 F
+P 4 0 1 0  -75 225  -50 250  -25 200  -75 225 F
+P 4 0 1 0  175 200  -25 50  -25 -50  175 -200 N
+P 5 0 1 0  111 152  86 102  111 152  58 147  111 152 N
+X ~ B -250 0 75 R 50 50 1 1 P
+X ~ C 250 -200 75 L 50 50 1 1 P
+X ~ E 250 200 75 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Photoransistor_NPN_Wo-B
+#
+DEF Photoransistor_NPN_Wo-B Q 0 40 Y Y 1 F N
+F0 "Q" 25 275 60 H V C CNN
+F1 "Photoransistor_NPN_Wo-B" 25 -275 60 H V C CNN
+DRAW
+P 2 0 1 0  -50 225  -100 275 N
+P 3 0 1 0  -100 175  -150 225  -150 225 N
+P 3 0 1 0  -25 125  -25 -125  -25 -125 N
+P 4 0 1 0  -75 150  -125 175  -100 200  -75 150 F
+P 4 0 1 0  -75 225  -50 250  -25 200  -75 225 F
+P 4 0 1 0  175 200  -25 50  -25 -50  175 -200 N
+P 5 0 1 0  111 152  86 102  111 152  58 147  111 152 N
+X ~ C 250 -200 75 L 50 50 1 1 P
+X ~ E 250 200 75 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Photoransistor_PNP_W-B
+#
+DEF Photoransistor_PNP_W-B Q 0 40 Y Y 1 F N
+F0 "Q" 25 275 60 H V C CNN
+F1 "Photoransistor_PNP_W-B" 25 -275 60 H V C CNN
+DRAW
+P 2 0 1 0  -175 0  -25 0 N
+P 3 0 1 0  -25 125  -25 -125  -25 -125 N
+P 3 0 1 0  119 129  63 115  87 165 N
+P 4 0 1 0  175 200  -25 50  -25 -50  175 -200 N
+P 5 0 1 0  -25 200  -75 225  -50 250  -25 200  -100 275 F
+P 6 0 1 0  -75 150  -125 175  -100 200  -75 150  -150 225  -125 200 F
+X ~ B -250 0 75 R 50 50 1 1 P
+X ~ C 250 -200 75 L 50 50 1 1 P
+X ~ E 250 200 75 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Photoransistor_PNP_Wo-B
+#
+DEF Photoransistor_PNP_Wo-B Q 0 40 Y Y 1 F N
+F0 "Q" 25 275 60 H V C CNN
+F1 "Photoransistor_PNP_Wo-B" 25 -275 60 H V C CNN
+DRAW
+P 3 0 1 0  -25 125  -25 -125  -25 -125 N
+P 3 0 1 0  119 129  63 115  87 165 N
+P 4 0 1 0  175 200  -25 50  -25 -50  175 -200 N
+P 5 0 1 0  -25 200  -75 225  -50 250  -25 200  -100 275 F
+P 6 0 1 0  -75 150  -125 175  -100 200  -75 150  -150 225  -125 200 F
+X ~ C 250 -200 75 L 50 50 1 1 P
+X ~ E 250 200 75 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Photoresistor
+#
+DEF Photoresistor R 0 40 N N 1 F N
+F0 "R" 0 -100 60 H V C CNN
+F1 "Photoresistor" 0 0 60 H V C CNN
+DRAW
+S -150 50 150 -50 0 1 0 N
+P 5 0 1 0  -1 175  49 200  24 225  -1 175  74 250 F
+P 5 0 1 0  50 125  75 175  100 150  50 125  125 200 F
+X 1 1 -200 0 50 R 0 0 1 1 P
+X 2 2 200 0 50 L 0 0 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Photovoltaic_Cell
+#
+DEF Photovoltaic_Cell PV 0 40 N N 1 F N
+F0 "PV" 0 -200 60 H V C CNN
+F1 "Photovoltaic_Cell" 0 275 60 H V C CNN
+DRAW
+P 2 0 1 0  -25 -50  -25 50 N
+P 3 0 1 0  0 100  0 -100  0 -100 N
+P 5 0 1 0  -75 100  -100 150  -125 125  -75 100  -150 175 F
+P 5 0 1 0  -24 150  -74 175  -49 200  -24 150  -99 225 F
+P 5 0 1 0  25 75  75 75  50 75  50 100  50 50 N
+X 1 1 100 0 100 L 0 0 1 1 P
+X 2 2 -100 0 75 R 0 0 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Point
+#
+DEF Point - 0 40 N N 1 F N
+F0 "-" 200 250 60 H I L CNN
+F1 "Point" 50 0 60 H V L CNN
+DRAW
+C 0 75 25 0 0 0 N
+P 2 0 0 0  0 50  0 0 N
+X GNF 1 0 -50 50 U 0 0 1 1 w
+ENDDRAW
+ENDDEF
+#
+# Potentiometer_Movable_Contact
+#
+DEF Potentiometer_Movable_Contact R 0 40 N N 1 F N
+F0 "R" 0 -100 60 H V C CNN
+F1 "Potentiometer_Movable_Contact" 0 0 60 H V C CNN
+DRAW
+S -150 50 150 -50 0 1 0 N
+P 3 0 1 0  150 200  0 200  0 50 N
+P 5 0 1 0  0 50  50 150  -50 150  0 50  0 50 F
+X 1 1 -200 0 50 R 0 0 1 1 P
+X 2 2 200 200 50 L 0 0 1 1 P
+X 3 3 200 0 50 L 0 0 1 1 P
+ENDDRAW
+ENDDEF
+#
+# R
+#
+DEF R R 0 40 N N 1 F N
+F0 "R" 0 -100 60 H V C CNN
+F1 "R" 0 0 60 H V C CNN
+DRAW
+S -150 50 150 -50 0 1 0 N
+X 1 1 -200 0 50 R 0 0 1 1 P
+X 2 2 200 0 50 L 0 0 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Relay_coil
+#
+DEF Relay_coil CO 0 40 N N 1 F N
+F0 "CO" 50 150 60 H V L CNN
+F1 "Relay_coil" 50 -100 60 H V L CNN
+DRAW
+S -200 100 200 -50 0 0 0 N
+P 2 0 0 0  0 -100  0 -50 N
+P 2 0 0 0  0 100  0 150 N
+X 1 1 0 200 50 D 0 0 1 1 P
+X 2 2 0 -150 50 U 0 0 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Resistor
+#
+DEF Resistor R 0 40 N N 1 F N
+F0 "R" 0 -100 60 H V C CNN
+F1 "Resistor" 0 0 60 H V C CNN
+DRAW
+S -150 50 150 -50 0 1 0 N
+X 1 1 -200 0 50 R 0 0 1 1 P
+X 2 2 200 0 50 L 0 0 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Resistor_Movable_Contact
+#
+DEF Resistor_Movable_Contact R 0 40 N N 1 F N
+F0 "R" 0 -100 60 H V C CNN
+F1 "Resistor_Movable_Contact" 0 0 60 H V C CNN
+DRAW
+S -150 50 150 -50 0 1 0 N
+P 3 0 1 0  150 200  0 200  0 50 N
+P 5 0 1 0  0 50  50 150  -50 150  0 50  0 50 F
+X 1 1 -200 0 50 R 0 0 1 1 P
+X 2 2 200 200 50 L 0 0 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Resistor_Movable_Contact_Off
+#
+DEF Resistor_Movable_Contact_Off R 0 40 N N 1 F N
+F0 "R" 0 -100 60 H V C CNN
+F1 "Resistor_Movable_Contact_Off" 0 0 60 H V C CNN
+DRAW
+S -150 50 150 -50 0 1 0 N
+S 175 50 225 -50 0 1 0 F
+P 3 0 1 0  150 200  0 200  0 50 N
+P 5 0 1 0  0 50  50 150  -50 150  0 50  0 50 F
+X 1 1 -200 0 50 R 0 0 1 1 P
+X 2 2 200 200 50 L 0 0 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Switch_break-contact
+#
+DEF Switch_break-contact S 0 40 N N 1 F N
+F0 "S" 150 -75 60 H V L CNN
+F1 "Switch_break-contact" 150 50 60 H V L CNN
+DRAW
+P 2 0 1 0  0 -100  75 125 N
+P 2 0 1 0  0 100  100 100 N
+P 3 0 1 0  0 -100  0 -200  0 -200 N
+P 3 0 1 0  0 100  0 200  0 200 N
+X 1 1 0 300 100 D 50 50 1 1 P
+X 2 2 0 -300 100 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Switch_make-contact
+#
+DEF Switch_make-contact S 0 40 N N 1 F N
+F0 "S" 75 -75 60 H V L CNN
+F1 "Switch_make-contact" 75 50 60 H V L CNN
+DRAW
+P 3 0 1 0  0 -100  -100 100  -100 100 N
+P 3 0 1 0  0 -100  0 -200  0 -200 N
+P 3 0 1 0  0 100  0 200  0 200 N
+X 1 1 0 300 100 D 50 50 1 1 P
+X 2 2 0 -300 100 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Thyristor_N-Gate
+#
+DEF Thyristor_N-Gate D 0 40 Y Y 1 F N
+F0 "D" 150 -50 60 H V L CNN
+F1 "Thyristor_N-Gate" 150 50 60 H V L CNN
+DRAW
+P 2 0 1 0  -125 -100  125 -100 N
+P 3 0 1 0  -75 100  -100 200  -200 200 N
+P 3 0 1 0  0 100  0 -100  0 -75 N
+P 4 0 1 0  0 -100  -125 100  125 100  0 -100 N
+X ~ A 0 200 100 D 50 50 1 1 P
+X ~ C 0 -200 100 U 50 50 1 1 P
+X ~ G -200 200 100 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Thyristor_P-Gate
+#
+DEF Thyristor_P-Gate D 0 40 Y Y 1 F N
+F0 "D" 150 -50 60 H V L CNN
+F1 "Thyristor_P-Gate" 150 50 60 H V L CNN
+DRAW
+P 2 0 1 0  -125 -100  125 -100 N
+P 3 0 1 0  -75 -100  -100 -200  -100 -200 N
+P 3 0 1 0  0 100  0 -100  0 -75 N
+P 4 0 1 0  0 -100  -125 100  125 100  0 -100 N
+X ~ A 0 200 100 D 50 50 1 1 P
+X ~ C 0 -200 100 U 50 50 1 1 P
+X ~ G -200 -200 100 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Transistor_NPN
+#
+DEF Transistor_NPN Q 0 40 Y Y 1 F N
+F0 "Q" 25 275 60 H V C CNN
+F1 "Transistor_NPN" 25 -275 60 H V C CNN
+DRAW
+P 2 0 1 0  -175 0  -25 0 N
+P 3 0 1 0  -25 125  -25 -125  -25 -125 N
+P 4 0 1 0  175 200  -25 50  -25 -50  175 -200 N
+P 5 0 1 0  111 152  86 102  111 152  58 147  111 152 N
+X ~ B -250 0 75 R 50 50 1 1 P
+X ~ C 250 -200 75 L 50 50 1 1 P
+X ~ E 250 200 75 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Transistor_NPN_Env-B
+#
+DEF Transistor_NPN_Env-B Q 0 40 Y Y 1 F N
+F0 "Q" 25 275 60 H V C CNN
+F1 "Transistor_NPN_Env-B" 25 -275 60 H V C CNN
+DRAW
+C -174 0 16 0 1 0 F
+C 25 0 200 0 1 0 N
+P 2 0 1 0  -175 0  -25 0 N
+P 3 0 1 0  -25 125  -25 -125  -25 -125 N
+P 4 0 1 0  175 200  -25 50  -25 -50  175 -200 N
+P 5 0 1 0  111 152  86 102  111 152  58 147  111 152 N
+X ~ B -250 0 75 R 50 50 1 1 P
+X ~ C 250 -200 75 L 50 50 1 1 P
+X ~ E 250 200 75 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Transistor_NPN_Env-C
+#
+DEF Transistor_NPN_Env-C Q 0 40 Y Y 1 F N
+F0 "Q" 25 275 60 H V C CNN
+F1 "Transistor_NPN_Env-C" 25 -275 60 H V C CNN
+DRAW
+C 25 0 200 0 1 0 N
+C 132 -168 16 0 1 0 F
+P 2 0 1 0  -175 0  -25 0 N
+P 3 0 1 0  -25 125  -25 -125  -25 -125 N
+P 4 0 1 0  175 200  -25 50  -25 -50  175 -200 N
+P 5 0 1 0  111 152  86 102  111 152  58 147  111 152 N
+X ~ B -250 0 75 R 50 50 1 1 P
+X ~ C 250 -200 75 L 50 50 1 1 P
+X ~ E 250 200 75 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Transistor_NPN_Env-E
+#
+DEF Transistor_NPN_Env-E Q 0 40 Y Y 1 F N
+F0 "Q" 25 275 60 H V C CNN
+F1 "Transistor_NPN_Env-E" 25 -275 60 H V C CNN
+DRAW
+C 25 0 200 0 1 0 N
+C 132 168 16 0 1 0 F
+P 2 0 1 0  -175 0  -25 0 N
+P 3 0 1 0  -25 125  -25 -125  -25 -125 N
+P 4 0 1 0  175 200  -25 50  -25 -50  175 -200 N
+P 5 0 1 0  111 152  86 102  111 152  58 147  111 152 N
+X ~ B -250 0 75 R 50 50 1 1 P
+X ~ C 250 -200 75 L 50 50 1 1 P
+X ~ E 250 200 75 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Transistor_PNP
+#
+DEF Transistor_PNP Q 0 40 Y Y 1 F N
+F0 "Q" 25 275 60 H V C CNN
+F1 "Transistor_PNP" 25 -275 60 H V C CNN
+DRAW
+P 2 0 1 0  -175 0  -25 0 N
+P 3 0 1 0  -25 125  -25 -125  -25 -125 N
+P 3 0 1 0  119 129  63 115  87 165 N
+P 4 0 1 0  175 200  -25 50  -25 -50  175 -200 N
+X ~ B -250 0 75 R 50 50 1 1 P
+X ~ C 250 -200 75 L 50 50 1 1 P
+X ~ E 250 200 75 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Transistor_PNP_Env-C
+#
+DEF Transistor_PNP_Env-C Q 0 40 Y Y 1 F N
+F0 "Q" 25 275 60 H V C CNN
+F1 "Transistor_PNP_Env-C" 25 -275 60 H V C CNN
+DRAW
+C 25 0 200 0 1 0 N
+C 132 -167 16 0 1 0 F
+P 2 0 1 0  -175 0  -25 0 N
+P 3 0 1 0  -25 125  -25 -125  -25 -125 N
+P 3 0 1 0  119 129  63 115  87 165 N
+P 4 0 1 0  175 200  -25 50  -25 -50  175 -200 N
+X ~ B -250 0 75 R 50 50 1 1 P
+X ~ C 250 -200 75 L 50 50 1 1 P
+X ~ E 250 200 75 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Transistor_PNP_Env-E
+#
+DEF Transistor_PNP_Env-E Q 0 40 Y Y 1 F N
+F0 "Q" 25 275 60 H V C CNN
+F1 "Transistor_PNP_Env-E" 25 -275 60 H V C CNN
+DRAW
+C 25 0 200 0 1 0 N
+C 132 166 16 0 1 0 F
+P 2 0 1 0  -175 0  -25 0 N
+P 3 0 1 0  -25 125  -25 -125  -25 -125 N
+P 3 0 1 0  119 129  63 115  87 165 N
+P 4 0 1 0  175 200  -25 50  -25 -50  175 -200 N
+X ~ B -250 0 75 R 50 50 1 1 P
+X ~ C 250 -200 75 L 50 50 1 1 P
+X ~ E 250 200 75 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Triac
+#
+DEF Triac D 0 40 Y Y 1 F N
+F0 "D" 275 -50 60 H V L CNN
+F1 "Triac" 275 50 60 H V L CNN
+DRAW
+P 2 0 1 0  -225 100  -100 -100 N
+P 2 0 1 0  -25 -100  100 100 N
+P 2 0 1 0  100 100  225 -100 N
+P 3 0 1 0  -225 100  225 100  225 100 N
+P 3 0 1 0  -100 -100  25 100  25 100 N
+P 3 0 1 0  174 -100  199 -200  199 -200 N
+P 3 0 1 0  225 -100  -225 -100  -225 -100 N
+X ~ A 0 200 100 D 50 50 1 1 P
+X ~ C 0 -200 100 U 50 50 1 1 P
+X ~ G 299 -200 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Tunnel_Diode
+#
+DEF Tunnel_Diode D 0 40 Y Y 1 F N
+F0 "D" 150 -50 60 H V L CNN
+F1 "Tunnel_Diode" 150 50 60 H V L CNN
+DRAW
+P 2 0 1 0  -100 -100  -100 -50 N
+P 2 0 1 0  -100 -100  100 -100 N
+P 2 0 1 0  100 -100  100 -50 N
+P 3 0 1 0  0 100  0 -100  0 -75 N
+P 4 0 1 0  0 -100  -100 100  100 100  0 -100 N
+X ~ A 0 200 100 D 50 50 1 1 P
+X ~ C 0 -200 100 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Voltage_Source
+#
+DEF Voltage_Source PS 0 0 N Y 1 F N
+F0 "PS" 150 -50 60 H V L CNN
+F1 "Voltage_Source" 150 50 60 H V L CNN
+DRAW
+C 0 0 100 0 0 0 N
+P 3 0 0 0  0 100  0 -100  0 -100 N
+X + 1 0 200 100 D 50 50 1 1 P
+X - 2 0 -200 100 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Zener_Diode
+#
+DEF Zener_Diode D 0 40 Y Y 1 F N
+F0 "D" 150 -50 60 H V L CNN
+F1 "Zener_Diode" 150 50 60 H V L CNN
+DRAW
+P 2 0 0 0  100 -100  100 -150 N
+P 2 0 1 0  -100 -100  -100 -50 N
+P 2 0 1 0  -100 -100  100 -100 N
+P 3 0 1 0  0 100  0 -100  0 -75 N
+P 4 0 1 0  0 -100  -100 100  100 100  0 -100 N
+X ~ A 0 200 100 D 50 50 1 1 P
+X ~ C 0 -200 100 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+#End Library

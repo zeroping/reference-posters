@@ -1,0 +1,112 @@
+EESchema Schematic File Version 2  date Wed 23 May 2012 06:32:31 AM EDT
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:eu_symbols
+LIBS:poeremote-cache
+EELAYER 25  0
+EELAYER END
+$Descr A4 11700 8267
+encoding utf-8
+Sheet 1 1
+Title "noname.sch"
+Date "23 may 2012"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Label 1400 2100 2    60   ~ 0
+Vin1
+Text Label 2200 2700 0    60   ~ 0
+Vin2
+Text Label 1400 2700 2    60   ~ 0
+Vout-
+Text Label 2100 2100 0    60   ~ 0
+Vout+
+Connection ~ 1500 2100
+Wire Wire Line
+	1400 2100 1600 2100
+Connection ~ 2100 2700
+Wire Wire Line
+	2200 2700 2000 2700
+Wire Wire Line
+	2100 2700 2100 2600
+Wire Wire Line
+	1500 2100 1500 2200
+Wire Wire Line
+	2100 2100 2100 2200
+Wire Wire Line
+	1500 2700 1500 2600
+Wire Wire Line
+	2200 2100 2000 2100
+Connection ~ 2100 2100
+Wire Wire Line
+	1400 2700 1600 2700
+Connection ~ 1500 2700
+$Comp
+L DIODE D?
+U 1 1 4FBCBBFF
+P 1500 2400
+F 0 "D?" H 1500 2500 40  0000 C CNN
+F 1 "DIODE" H 1500 2300 40  0000 C CNN
+	1    1500 2400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L DIODE D?
+U 1 1 4FBCBBED
+P 2100 2400
+F 0 "D?" H 2100 2500 40  0000 C CNN
+F 1 "DIODE" H 2100 2300 40  0000 C CNN
+	1    2100 2400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L DIODE D?
+U 1 1 4FBCBBEB
+P 1800 2100
+F 0 "D?" H 1800 2200 40  0000 C CNN
+F 1 "DIODE" H 1800 2000 40  0000 C CNN
+	1    1800 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L DIODE D?
+U 1 1 4FBCBBD2
+P 1800 2700
+F 0 "D?" H 1800 2800 40  0000 C CNN
+F 1 "DIODE" H 1800 2600 40  0000 C CNN
+	1    1800 2700
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
